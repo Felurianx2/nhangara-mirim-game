@@ -317,5 +317,5 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 <div align="center">
   <p><strong>🌿 Made with ❤️ for Brazilian Biomes Conservation</strong></p>
-  <p><em>Built for Hackathon 2024</em></p>
+  <p><em>Built for Hackathon 2025</em></p>
 </div>
