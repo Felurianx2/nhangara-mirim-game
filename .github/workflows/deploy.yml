@@ -1,134 +1,36 @@
-name: 🚀 Deploy to Cloudflare Pages
+name: Deploy to Cloudflare Pages
 
 on:
   push:
-    branches: [ main, dev ]
+    branches: [ main, master ]
   pull_request:
-    branches: [ main ]
-
-env:
-  NODE_VERSION: '18'
+    branches: [ main, master ]
 
 jobs:
-  test:
-    name: 🧪 Test & Build
+  deploy:
     runs-on: ubuntu-latest
     
     steps:
-    - name: 📥 Checkout code
-      uses: actions/checkout@v4
-
-    - name: 📦 Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
-
-    - name: 🔧 Install dependencies
-      run: npm ci
-
-    - name: 🧪 Run tests
-      run: npm test --if-present
-
-    - name: 🏗️ Build project
-      run: npm run build
-
-    - name: 📊 Build size
-      run: |
-        echo "📦 Build completed successfully!"
-        echo "📁 Build directory: dist/"
-        echo "📊 Bundle size:"
-        du -sh dist/*
-
-  deploy-preview:
-    name: 🧪 Deploy Preview
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
-    needs: test
-    
-    steps:
-    - name: 📥 Checkout code
-      uses: actions/checkout@v4
-
-    - name: 📦 Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
-
-    - name: 🔧 Install dependencies
-      run: npm ci
-
-    - name: 🏗️ Build project
-      run: npm run build
-
-    - name: 🚀 Deploy to Cloudflare Pages (Preview)
-      uses: cloudflare/pages-action@v1
-      with:
-        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        projectName: nhangara-mirim-game
-        directory: dist
-        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: 📋 Deploy status
-      run: |
-        echo "✅ Preview deploy completed!"
-        echo "🌐 Preview URL: https://dev.nhangara-mirim-game.pages.dev"
-        echo "📁 Build: dist/"
-
-  deploy-production:
-    name: 🚀 Deploy Production
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    needs: test
-    
-    steps:
-    - name: 📥 Checkout code
-      uses: actions/checkout@v4
-
-    - name: 📦 Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
-
-    - name: 🔧 Install dependencies
-      run: npm ci
-
-    - name: 🏗️ Build project
-      run: npm run build
-
-    - name: 🚀 Deploy to Cloudflare Pages (Production)
-      uses: cloudflare/pages-action@v1
-      with:
-        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        projectName: nhangara-mirim-game
-        directory: dist
-        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: 📋 Deploy status
-      run: |
-        echo "✅ Production deploy completed!"
-        echo "🌐 Production URL: https://nhangara-mirim-game.pages.dev"
-        echo "📁 Build: dist/"
-        echo "🏆 Hackathon project deployed successfully!"
-
-  notify:
-    name: 📢 Notify Success
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    needs: deploy-production
-    
-    steps:
-    - name: 📢 Deploy notification
-      run: |
-        echo "🎉 Nhangara Mirim deployed successfully!"
-        echo "🌿 Brazilian Biomes Conservation Game"
-        echo "🏆 Hackathon 2024 Project"
-        echo "🌐 Live at: https://nhangara-mirim-game.pages.dev"
-        echo "📱 Mobile responsive design"
-        echo "🌍 Bilingual (PT-BR/EN-US)"
-        echo "💎 Hedera Blockchain integration"
-        echo "☁️ Cloudflare edge deployment" 
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build
+        run: npm run build
+        
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: nhangara-mirim-game
+          directory: dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }} 
