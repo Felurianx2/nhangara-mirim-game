@@ -1,0 +1,40 @@
+{
+  "name": "nhangara-mirim-game",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext ts,tsx --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "type-check": "tsc --noEmit",
+    "test": "echo \"No tests specified\" && exit 0",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name nhangara-mirim-game",
+    "deploy:dev": "npm run build && wrangler pages deploy dist --project-name nhangara-mirim-game-dev --env development",
+    "deploy:prod": "npm run build && wrangler pages deploy dist --project-name nhangara-mirim-game --env production",
+    "deploy:preview": "npm run build && wrangler pages deploy dist --project-name nhangara-mirim-game --branch dev",
+    "clean": "rm -rf dist node_modules/.vite",
+    "prepare": "husky install",
+    "setup-secrets": "powershell -ExecutionPolicy Bypass -File scripts/setup-secrets.ps1",
+    "setup-hedera-secrets": "powershell -ExecutionPolicy Bypass -File scripts/setup-hedera-secrets.ps1",
+    "test:hedera": "node -e \"console.log('Testing Hedera connectivity...'); require('@hashgraph/sdk'); console.log('✅ Hedera SDK loaded successfully');\"",
+    "test:hedera-connectivity": "node scripts/test-hedera-connectivity.js",
+    "test:security": "node -e \"console.log('🔒 Testing security features...'); const { SecurityManager, SecretsValidator } = require('./src/utils/security'); console.log('✅ Security utilities loaded successfully');\"",
+    "security:audit": "node scripts/security-audit.js"
+  },
+  "dependencies": {
+    "@hashgraph/sdk": "^2.69.0",
+    "lucide-react": "^0.536.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.7.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}

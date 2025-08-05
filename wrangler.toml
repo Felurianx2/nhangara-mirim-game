@@ -1,0 +1,61 @@
+name = "nhangara-mirim-game"
+compatibility_date = "2024-01-01"
+
+[site]
+bucket = "./dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "nhangara-mirim-db"
+database_id = "03c406ca-cbc4-49a3-9e1c-442e670255ea"
+
+# Environment variables
+[vars]
+HEDERA_NETWORK = "mainnet"
+ENVIRONMENT = "production"
+
+# Development environment
+[env.development]
+name = "nhangara-mirim-game-dev"
+compatibility_date = "2024-01-01"
+
+[env.development.vars]
+HEDERA_NETWORK = "testnet"
+ENVIRONMENT = "development"
+
+[env.development.site]
+bucket = "./dist"
+
+[[env.development.d1_databases]]
+binding = "DB"
+database_name = "nhangara-mirim-db-dev"
+database_id = "03c406ca-cbc4-49a3-9e1c-442e670255ea"
+
+# Production environment
+[env.production]
+name = "nhangara-mirim-game"
+compatibility_date = "2024-01-01"
+
+[env.production.vars]
+HEDERA_NETWORK = "mainnet"
+ENVIRONMENT = "production"
+
+[env.production.site]
+bucket = "./dist"
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "nhangara-mirim-db"
+database_id = "03c406ca-cbc4-49a3-9e1c-442e670255ea"
+
+# Secrets são configurados via Cloudflare Dashboard ou wrangler secret put
+# Os secrets ficam armazenados no Cloudflare Secrets Store
+# e são acessados pelos Workers através da variável env
+
+# Para configurar os secrets, use os comandos:
+# wrangler secret put HEDERA_ACCOUNT_ID_DEV
+# wrangler secret put HEDERA_PRIVATE_KEY_DEV
+# wrangler secret put HEDERA_PUBLIC_KEY_DEV
+# wrangler secret put HEDERA_ACCOUNT_ID_PROD
+# wrangler secret put HEDERA_PRIVATE_KEY_PROD
+# wrangler secret put HEDERA_PUBLIC_KEY_PROD 
