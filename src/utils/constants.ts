@@ -1,102 +1,216 @@
 
 import { Biome, Character, BiomeId, CharacterId, NFT, PlayerAvatar } from '@/types/types';
 
-// --- LOCAL IMAGES ---
-// Images from the local imagens_lcc folder
+// --- LOCAL ASSETS BASE URL ---
+const LOCAL_ASSETS_BASE_URL = '/images';
+
+// --- NHANGARA MIRIM ASSETS REPOSITORY (fallback) ---
+const ASSETS_BASE_URL = 'https://raw.githubusercontent.com/Felurianx2/nhangara-mirim-assets/main';
+
+// --- BACKGROUNDS ---
+export const BACKGROUNDS = {
+    HERO_BANNER: `${LOCAL_ASSETS_BASE_URL}/backgrounds/mata-atlantica.png`,
+    BIOME_MAP: `${LOCAL_ASSETS_BASE_URL}/backgrounds/mata-atlantica.png`,
+    FOREST_BG: `${LOCAL_ASSETS_BASE_URL}/backgrounds/mata-atlantica.png`,
+    SAVANNA_BG: `${LOCAL_ASSETS_BASE_URL}/backgrounds/cerrado.png`,
+    WETLAND_BG: `${LOCAL_ASSETS_BASE_URL}/backgrounds/pantanal.png`,
+    DESERT_BG: `${LOCAL_ASSETS_BASE_URL}/backgrounds/caatinga.png`,
+    UI_BACKGROUND: `${LOCAL_ASSETS_BASE_URL}/backgrounds/mata-atlantica.png`,
+};
+
+// --- CHARACTERS ---
+export const CHARACTERS: Character[] = [
+    { 
+        id: CharacterId.Curupira, 
+        name: 'Curupira', 
+        imageUrl: `${LOCAL_ASSETS_BASE_URL}/mentors/curupira.png`,
+        description: 'Guardian of the Fauna and Flora',
+        personality: 'Protective and wise'
+    },
+    { 
+        id: CharacterId.LoboGuara, 
+        name: 'Maned Wolf', 
+        imageUrl: `${LOCAL_ASSETS_BASE_URL}/mentors/loboguara_mentor.png`,
+        description: 'The Shy Guardian of the Savannas',
+        personality: 'Shy and observant'
+    },
+    { 
+        id: CharacterId.Iara, 
+        name: 'Iara', 
+        imageUrl: `${LOCAL_ASSETS_BASE_URL}/mentors/iara.png`,
+        description: 'Mother of the Waters, Protector of the Rivers',
+        personality: 'Mysterious and enchanting'
+    },
+    { 
+        id: CharacterId.ZePelintra, 
+        name: 'Zumbi', 
+        imageUrl: `${LOCAL_ASSETS_BASE_URL}/mentors/Zumbi.png`,
+        description: 'character.zumbi.description',
+        personality: 'Wise and playful'
+    }
+];
+
+// --- BIOMES ---
+export const BIOME_IMAGES = {
+    [BiomeId.MataAtlantica]: {
+        hero: `${LOCAL_ASSETS_BASE_URL}/biomas/mata-atlantica/mata-map.png`,
+        map: `${LOCAL_ASSETS_BASE_URL}/biomas/mata-atlantica/mata-map.png`,
+        detail: `${LOCAL_ASSETS_BASE_URL}/backgrounds/mata-atlantica.png`,
+        flora: `${LOCAL_ASSETS_BASE_URL}/backgrounds/mata-atlantica.png`,
+        fauna: `${LOCAL_ASSETS_BASE_URL}/backgrounds/mata-atlantica.png`,
+    },
+    [BiomeId.Cerrado]: {
+        hero: `${LOCAL_ASSETS_BASE_URL}/biomas/cerrado/cerrado-map.png`,
+        map: `${LOCAL_ASSETS_BASE_URL}/biomas/cerrado/cerrado-map.png`,
+        detail: `${LOCAL_ASSETS_BASE_URL}/backgrounds/cerrado.png`,
+        flora: `${LOCAL_ASSETS_BASE_URL}/backgrounds/cerrado.png`,
+        fauna: `${LOCAL_ASSETS_BASE_URL}/backgrounds/cerrado.png`,
+    },
+    [BiomeId.Pantanal]: {
+        hero: `${LOCAL_ASSETS_BASE_URL}/biomas/pantanal/pantanal-map.png`,
+        map: `${LOCAL_ASSETS_BASE_URL}/biomas/pantanal/pantanal-map.png`,
+        detail: `${LOCAL_ASSETS_BASE_URL}/backgrounds/pantanal.png`,
+        flora: `${LOCAL_ASSETS_BASE_URL}/backgrounds/pantanal.png`,
+        fauna: `${LOCAL_ASSETS_BASE_URL}/backgrounds/pantanal.png`,
+    },
+    [BiomeId.Caatinga]: {
+        hero: `${LOCAL_ASSETS_BASE_URL}/biomas/caatinga/caatinga-map.png`,
+        map: `${LOCAL_ASSETS_BASE_URL}/biomas/caatinga/caatinga-map.png`,
+        detail: `${LOCAL_ASSETS_BASE_URL}/backgrounds/caatinga.png`,
+        flora: `${LOCAL_ASSETS_BASE_URL}/backgrounds/caatinga.png`,
+        fauna: `${LOCAL_ASSETS_BASE_URL}/backgrounds/caatinga.png`,
+    },
+};
+
+// --- NFTs ---
+export const NFT_IMAGES = {
+    [BiomeId.MataAtlantica]: `${LOCAL_ASSETS_BASE_URL}/bioamulets/amulet-mata.png`,
+    [BiomeId.Cerrado]: `${LOCAL_ASSETS_BASE_URL}/bioamulets/amulet-cerrado.png`,
+    [BiomeId.Pantanal]: `${LOCAL_ASSETS_BASE_URL}/bioamulets/amulet-pantanal.png`,
+    [BiomeId.Caatinga]: `${LOCAL_ASSETS_BASE_URL}/bioamulets/amulet-caatinga.png`,
+};
+
+// --- UI/UX ELEMENTS ---
+export const UI_ELEMENTS = {
+    BUTTONS: {
+        PRIMARY: `${ASSETS_BASE_URL}/ui-ux-elements/button-primary.png`,
+        SECONDARY: `${ASSETS_BASE_URL}/ui-ux-elements/button-secondary.png`,
+        SUCCESS: `${ASSETS_BASE_URL}/ui-ux-elements/button-success.png`,
+        DANGER: `${ASSETS_BASE_URL}/ui-ux-elements/button-danger.png`,
+    },
+    CARDS: {
+        BIOME_CARD: `${ASSETS_BASE_URL}/ui-ux-elements/biome-card.png`,
+        MISSION_CARD: `${ASSETS_BASE_URL}/ui-ux-elements/mission-card.png`,
+        NFT_CARD: `${ASSETS_BASE_URL}/ui-ux-elements/nft-card.png`,
+    },
+    ICONS: {
+        XP_ICON: `${ASSETS_BASE_URL}/ui-ux-elements/xp-icon.png`,
+        COIN_ICON: `${ASSETS_BASE_URL}/ui-ux-elements/coin-icon.png`,
+        LOCK_ICON: `${ASSETS_BASE_URL}/ui-ux-elements/lock-icon.png`,
+        UNLOCK_ICON: `${ASSETS_BASE_URL}/ui-ux-elements/unlock-icon.png`,
+        CHECK_ICON: `${ASSETS_BASE_URL}/ui-ux-elements/check-icon.png`,
+    },
+    BACKGROUNDS: {
+        MODAL_BG: `${ASSETS_BASE_URL}/ui-ux-elements/modal-background.png`,
+        PANEL_BG: `${ASSETS_BASE_URL}/ui-ux-elements/panel-background.png`,
+        HEADER_BG: `${ASSETS_BASE_URL}/ui-ux-elements/header-background.png`,
+    }
+};
+
+// --- MINI-GAMES ---
+export const MINI_GAMES = {
+    RECYCLING: {
+        items: [
+            { id: 'plastic1', type: 'plastic', name: 'Plastic Bottle', imageUrl: `${LOCAL_ASSETS_BASE_URL}/mini-games/recycling/plastic.png` },
+            { id: 'glass1', type: 'glass', name: 'Glass Bottle', imageUrl: `${LOCAL_ASSETS_BASE_URL}/mini-games/recycling/glass.png` },
+            { id: 'metal1', type: 'metal', name: 'Aluminum Can', imageUrl: `${LOCAL_ASSETS_BASE_URL}/mini-games/recycling/metal.png` },
+            { id: 'paper1', type: 'paper', name: 'Newspaper', imageUrl: `${LOCAL_ASSETS_BASE_URL}/mini-games/recycling/paper.png` },
+        ],
+        bins: [
+            { type: 'plastic', name: 'Plastic', imageUrl: `${LOCAL_ASSETS_BASE_URL}/mini-games/recycling/bin-plastic.png` },
+            { type: 'glass', name: 'Glass', imageUrl: `${LOCAL_ASSETS_BASE_URL}/mini-games/recycling/bin-glass.png` },
+            { type: 'metal', name: 'Metal', imageUrl: `${LOCAL_ASSETS_BASE_URL}/mini-games/recycling/bin-metal.png` },
+            { type: 'paper', name: 'Paper', imageUrl: `${LOCAL_ASSETS_BASE_URL}/mini-games/recycling/bin-paper.png` }
+        ]
+    },
+    PLANTING: {
+        seed: `${LOCAL_ASSETS_BASE_URL}/mini-games/planting/seed.png`,
+        seedClick: `${LOCAL_ASSETS_BASE_URL}/mini-games/planting/seed-click.png`,
+        sapling: `${ASSETS_BASE_URL}/mini-games/planting/sapling.png`,
+        tree: `${ASSETS_BASE_URL}/mini-games/planting/tree.png`,
+        soil: `${ASSETS_BASE_URL}/mini-games/planting/soil.png`,
+    },
+    PHOTO_HUNT: {
+        pantanal1: `${LOCAL_ASSETS_BASE_URL}/backgrounds/pantanal.png`,
+        pantanal2: `${LOCAL_ASSETS_BASE_URL}/backgrounds/pantanal-without-animals.png`,
+    },
+    WATER_MANAGEMENT: {
+        background: `${LOCAL_ASSETS_BASE_URL}/backgrounds/caatinga.png`,
+    }
+};
+
+// --- FALLBACK IMAGES (for compatibility) ---
 export const LOCAL_IMAGES = {
     TELA: '/images/tela.jpg',
     SACI: '/images/saci.jpg',
     TALISMA_DA_SABEDORIA: '/images/talisma_da_sabedoria.jpg',
     BIOMAS: '/images/biomas.jpg',
+    CAATINGA_MAP: '/images/caatinga-map.png',
+    MAP: '/images/map.png',
     WELCOME_VIDEO: '/images/753b6295-8e4d-47ed-afc6-a5f94436fdef.mp4'
 };
 
-// --- STABLE IMAGE URLS ---
-// Using raw GitHub links for stability and permanence.
-export const HOME_BANNER_URL = LOCAL_IMAGES.TELA; // Using local image instead of remote
-export const HUB_BACKGROUND_URL = LOCAL_IMAGES.BIOMAS; // Using local biomas image as background
-
-// For small, critical UI icons, Base64 is efficient and reliable.
-const IMAGE_RECYCLE_PLASTIC_B64 = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN+SURBVHhe7ZxLy81xFMf/8x+k06JQiIUUUkK2yI6iVEpKyIpkIyVkIyv2hJSK2BUpUv6AEKVEKBLSRgqJLCQrG/n8vubcM/d5zjlzzn1u8zOf5H7v3HvOPfe55z73dEaj0Wg0Gr3hC4w/Wb0L92G/a/sXq18/YPyJ1bvwwNrvN/u/a/vfrH79gPEHVu/CA1u/pP3/av36A8afWN0LryP7T2v/v1r9+gHjD6xehQe2/iRp/1/L6tef8B8w/qTq3fA57H/L+r9e/foDxn949S6c7T7M7N8u/Rj8E0lJSv4p4C8rQkJCQv4K8JciISEhvwL8JSISH5P4E4VNSiQkJCQk/j8JCAm/gCT8P5OEhISkL2kSEl6SJCQk/v8nISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhIkpIkKUlSkqQkSUpSpCUpTUmSkpQkKUnS/+fN1/84SkhISCKRSIQfSRISkp+kJElKEn+SktUkKUlSktUkKUliE5KkpCSlSUpSJCQhCSlJkiQkKUlSkj8JCUmSJCUpSZIkhCSEJCUpkiQkKUlSkj8JCUmSJCUpSZIkhCSEJCUpkiQkKUlSkr+klJSmpCSlSUpSJCQhCSnSV0pSkqQkSUl8CUnSfyQkJEn9D0lKkpQkSRISkISQJCUpkpIkKQkhSUpSpCRJSZKUJBKRSCSSkpQkSZIkhCS+SUhCEiQkKUlSkqQk/p+kv5n+95cAAAAASUVORK5CYII=';
-const IMAGE_RECYCLE_GLASS_B64 = 'https://github.com/Felurianx2/nhangara-mirim-assets/blob/main/mini-games/recycling/glass.png?raw=true';
-const IMAGE_RECYCLE_PAPER_B64 = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATLSURBVHhe7ZxZb9NQFMe/1d7uWntpb7t2hEBAoFAoQpEoC0kQx8YDL2hCPOAJkPjgC/wAJsYT40E8eAExMS+YoB55QEKxLJAqIYoWCFpCqe22t/v13l9+2p27XbM9205I8kt+S2/3zp/OOfM/p5Pz/1wqlUqlUqlUqlUKpXKg1L44H+4f708QyL8tP39L1T87QOW/oH4a+T+U/D4g4o/+D4E+s9g+9eP3P8I+pPzH0F+69f7j2L/8H8+wP4H/P9B/P+p8S3Wq1f/+O/+2f45vL8v9/0L/P8G1G/X175P/P4j4v9/q159pL/mK1C//n8A/P4t+R8f/i+I//nF6r9x/A+V/q56f/v4t68tP9v/T+m333b/B3D8R+H74/yRJP47yT9yPAn4m4QkJCQk/j8JCUlSJCUpSZIkhCSEJCQhCSlIkpQkJCQhCSlJUqSkJCEJSZKEpCQJSUhCUqSkSJKQJCRJEpKEJCQhCUlKkiQkKUli+vf0t9//7D8JCQkJ/5MkSWKSkpR+EpIQkjSRpCQkISQJSZIkpUkSkpCEL+m/JSUpSZIkhCSEJCQhSSpSmpKkJElS/ksISUgSEpLUJCQhSUjSJCUpSRKSkCS+JSUpkvg7JKRJSZIkSZIkhCQkSRISkqQkSUhCUqQkSZIkhKQkSUpSkpIkSRIShCRJSZIkJElKkpAkpKRIkpAkSEhSUpKkJElSEpKkJElSkqQkSZIkhCQkISRJkpIkSUpSEpKkJEliEhKSJCUpkpIkKQkhCSlJkiQkKUlSkqQkSUpKUpLUJElKkiQkIQlJUpIkJCUpSYhISP+f8N9S/pQ/UpKUJCQkJCQhSRJSkpIkSUiSJIQkKUliEpKQJCQJSVIkCUlIQpLUJCQhCSlJUqSkJEkJQpKkJEkSEpKQJCUpkpIkKQkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/oH0G9e13B8v/YAAAAABJRU5ErkJggg==';
+// --- HUB BACKGROUND ---
+export const HUB_BACKGROUND_URL = LOCAL_IMAGES.MAP;
 
 // --- Avatars ---
 export const AVATARS: PlayerAvatar[] = [
-    { id: 'avatar1', name: 'Male Guardian', imageUrl: LOCAL_IMAGES.SACI }, // Using Saci image as avatar
-    { id: 'avatar2', name: 'Female Guardian', imageUrl: 'https://raw.githubusercontent.com/unb-mds/2024-1-squad02-nhangamirirm-images/main/avatars/female-guardian.png' },
+    { id: 'avatar1', name: 'Male Guardian', imageUrl: `${LOCAL_ASSETS_BASE_URL}/personagens/nhangara-male.png` },
+    { id: 'avatar2', name: 'Female Guardian', imageUrl: `${LOCAL_ASSETS_BASE_URL}/personagens/nhangara-female.png` },
+    { id: 'avatar3', name: 'Neutral Guardian', imageUrl: `${LOCAL_ASSETS_BASE_URL}/personagens/nhangara-neutral.png` },
 ];
 
-// --- Recycling Bin Images ---
-const IMAGE_RECYCLE_BIN_PLASTIC_URL = 'https://github.com/Felurianx2/nhangara-mirim-assets/blob/main/mini-games/recycling/bin-plastic.png?raw=true';
-const IMAGE_RECYCLE_BIN_GLASS_URL = 'https://github.com/Felurianx2/nhangara-mirim-assets/blob/main/mini-games/recycling/bin-glass.png?raw=true';
-const IMAGE_RECYCLE_BIN_METAL_URL = 'https://github.com/Felurianx2/nhangara-mirim-assets/blob/main/mini-games/recycling/bin-metal.png?raw=true';
-const IMAGE_RECYCLE_BIN_PAPER_URL = 'https://github.com/Felurianx2/nhangara-mirim-assets/blob/main/mini-games/recycling/bin-paper.png?raw=true';
-
-// --- Characters ---
-export const CHARACTERS: Character[] = [
-    { id: CharacterId.Curupira, name: 'Curupira', imageUrl: LOCAL_IMAGES.SACI }, // Using Saci image for Curupira
-    { id: CharacterId.LoboGuara, name: 'Maned Wolf', imageUrl: 'https://raw.githubusercontent.com/unb-mds/2024-1-squad02-nhangamirirm-images/main/characters/lobo-guara.png' },
-    { id: CharacterId.Iara, name: 'Iara', imageUrl: 'https://raw.githubusercontent.com/unb-mds/2024-1-squad02-nhangamirirm-images/main/characters/iara.png' },
-    { id: CharacterId.ZePelintra, name: 'Zé Pelintra', imageUrl: 'https://raw.githubusercontent.com/unb-mds/2024-1-squad02-nhangamirirm-images/main/characters/ze-pelintra.png' }
-];
-
-// --- NFTs ---
+// --- NFTs with new images ---
 const NFTS: { [key in BiomeId]: NFT } = {
     'mata-atlantica': {
         id: 'nft-mata-atlantica',
         name: 'Atlantic Forest Amulet',
         description: 'A symbol of your effort to preserve the rich biodiversity of the Atlantic Forest.',
-        imageUrl: LOCAL_IMAGES.TALISMA_DA_SABEDORIA, // Using local talisman image
+        imageUrl: NFT_IMAGES[BiomeId.MataAtlantica],
         biomeId: BiomeId.MataAtlantica,
     },
     'cerrado': {
         id: 'nft-cerrado',
         name: 'Cerrado Seed Amulet',
         description: 'Represents your contribution to the reforestation of the Brazilian savanna.',
-        imageUrl: LOCAL_IMAGES.TALISMA_DA_SABEDORIA, // Using local talisman image
+        imageUrl: NFT_IMAGES[BiomeId.Cerrado],
         biomeId: BiomeId.Cerrado,
     },
     'pantanal': {
         id: 'nft-pantanal',
         name: 'Pantanal Water Amulet',
         description: 'A mark of your help in preserving the pristine waters and fauna of the Pantanal.',
-        imageUrl: LOCAL_IMAGES.TALISMA_DA_SABEDORIA, // Using local talisman image
+        imageUrl: NFT_IMAGES[BiomeId.Pantanal],
         biomeId: BiomeId.Pantanal,
     },
     'caatinga': {
         id: 'nft-caatinga',
         name: 'Caatinga Sun Amulet',
         description: 'Symbolizes your understanding of resilience and wise use of resources in the semi-arid.',
-        imageUrl: LOCAL_IMAGES.TALISMA_DA_SABEDORIA, // Using local talisman image
+        imageUrl: NFT_IMAGES[BiomeId.Caatinga],
         biomeId: BiomeId.Caatinga,
     },
 };
 
-// --- Mini-Game Data ---
-export const RECYCLING_DATA = {
-    items: [
-        { id: 'plastic', type: 'plastic', name: 'Plastic Bottle', imageUrl: IMAGE_RECYCLE_PLASTIC_B64 },
-        { id: 'glass', type: 'glass', name: 'Glass Bottle', imageUrl: IMAGE_RECYCLE_GLASS_B64 },
-        { id: 'metal', type: 'metal', name: 'Can', imageUrl: 'https://github.com/Felurianx2/nhangara-mirim-assets/blob/main/mini-games/recycling/metal.png?raw=true' },
-        { id: 'paper', type: 'paper', name: 'Newspaper', imageUrl: IMAGE_RECYCLE_PAPER_B64 },
-    ],
-    bins: [
-        { type: 'plastic', name: 'Plastic', imageUrl: IMAGE_RECYCLE_BIN_PLASTIC_URL },
-        { type: 'glass', name: 'Glass', imageUrl: IMAGE_RECYCLE_BIN_GLASS_URL },
-        { type: 'metal', name: 'Metal', imageUrl: IMAGE_RECYCLE_BIN_METAL_URL },
-        { type: 'paper', name: 'Paper', imageUrl: IMAGE_RECYCLE_BIN_PAPER_URL }
-    ]
-};
-
+// --- Legacy data structures for compatibility ---
+export const RECYCLING_DATA = MINI_GAMES.RECYCLING;
 export const PLANTING_DATA = {
     target: 10,
-    seedImageUrl: 'https://github.com/Felurianx2/nhangara-mirim-assets/blob/main/mini-games/planting/seed.png?raw=true',
+    seedImageUrl: MINI_GAMES.PLANTING.seed,
 };
-
 export const PHOTO_HUNT_DATA = {
-    imageA: 'https://github.com/Felurianx2/nhangara-mirim-assets/blob/main/mini-games/photo-hunt/photo-hunt-with-animals.png?raw=true',
-    imageB: 'https://github.com/Felurianx2/nhangara-mirim-assets/blob/main/mini-games/photo-hunt/photo-hunt-without-animals.png?raw=true',
+    imageA: MINI_GAMES.PHOTO_HUNT.pantanal1,
+    imageB: MINI_GAMES.PHOTO_HUNT.pantanal2,
     differences: [
         { x: 25, y: 25, r: 8 },  // Tuiuiú (Bird in nest)
         { x: 75, y: 40, r: 8 },  // Jaguar
@@ -105,13 +219,12 @@ export const PHOTO_HUNT_DATA = {
         { x: 50, y: 80, r: 7 },  // Caiman
     ]
 };
-
 export const WATER_MANAGEMENT_DATA = {
     totalWater: 100,
     sectors: ['Farming', 'Livestock', 'Community'],
 };
 
-// --- Biome Definitions ---
+// --- Biome Definitions with new images ---
 export const BIOMES: Biome[] = [
     {
         id: BiomeId.MataAtlantica,
@@ -121,6 +234,7 @@ export const BIOMES: Biome[] = [
             name: 'Curupira',
             characterId: CharacterId.Curupira,
             description: "Guardian of the Fauna and Flora",
+            imageUrl: CHARACTERS.find(c => c.id === CharacterId.Curupira)?.imageUrl,
         },
         mainMission: {
             id: 'mata-atlantica-main',
@@ -133,10 +247,17 @@ export const BIOMES: Biome[] = [
         culturalMissions: [
             { id: 'ma-cult-1', title: 'Curupira\'s Quiz', description: 'Test your knowledge about the forest protector.', type: 'cultural', xpReward: 50, interactionType: 'quiz' }
         ],
-        reward: NFTS['mata-atlantica'],
+        reward: {
+            id: 'mata-atlantica-nft',
+            biomeId: BiomeId.MataAtlantica,
+            name: 'Atlantic Forest Amulet',
+            description: 'A sacred amulet representing the protection of the Atlantic Forest',
+            imageUrl: NFT_IMAGES[BiomeId.MataAtlantica]
+        },
         icon: '🌳',
         color: 'text-green-400',
-        description: 'A vibrant ecosystem teeming with life, facing the challenges of deforestation.'
+        description: 'A vibrant ecosystem teeming with life, facing the challenges of deforestation.',
+        images: BIOME_IMAGES[BiomeId.MataAtlantica]
     },
     {
         id: BiomeId.Cerrado,
@@ -146,6 +267,7 @@ export const BIOMES: Biome[] = [
             name: 'Maned Wolf',
             characterId: CharacterId.LoboGuara,
             description: 'The Shy Guardian of the Savannas',
+            imageUrl: CHARACTERS.find(c => c.id === CharacterId.LoboGuara)?.imageUrl,
         },
         mainMission: {
             id: 'cerrado-main',
@@ -158,10 +280,17 @@ export const BIOMES: Biome[] = [
         culturalMissions: [
             { id: 'ce-cult-1', title: 'Cerrado\'s Flavors', description: 'Discover the unique fruits of this biome.', type: 'cultural', xpReward: 50, interactionType: 'quiz' }
         ],
-        reward: NFTS['cerrado'],
+        reward: {
+            id: 'cerrado-nft',
+            biomeId: BiomeId.Cerrado,
+            name: 'Cerrado Amulet',
+            description: 'A sacred amulet representing the protection of the Cerrado',
+            imageUrl: NFT_IMAGES[BiomeId.Cerrado]
+        },
         icon: '🌾',
         color: 'text-yellow-400',
-        description: 'The most biodiverse savanna in the world, known for its twisted trees and vast grasslands.'
+        description: 'The most biodiverse savanna in the world, known for its twisted trees and vast grasslands.',
+        images: BIOME_IMAGES[BiomeId.Cerrado]
     },
     {
         id: BiomeId.Pantanal,
@@ -171,6 +300,7 @@ export const BIOMES: Biome[] = [
             name: 'Iara',
             characterId: CharacterId.Iara,
             description: 'Mother of the Waters, Protector of the Rivers',
+            imageUrl: CHARACTERS.find(c => c.id === CharacterId.Iara)?.imageUrl,
         },
         mainMission: {
             id: 'pantanal-main',
@@ -183,19 +313,27 @@ export const BIOMES: Biome[] = [
         culturalMissions: [
             { id: 'pa-cult-1', title: 'Legends of the Waters', description: 'Learn about the fantastic creatures of the rivers.', type: 'cultural', xpReward: 50, interactionType: 'quiz' }
         ],
-        reward: NFTS['pantanal'],
+        reward: {
+            id: 'pantanal-nft',
+            biomeId: BiomeId.Pantanal,
+            name: 'Pantanal Amulet',
+            description: 'A sacred amulet representing the protection of the Pantanal',
+            imageUrl: NFT_IMAGES[BiomeId.Pantanal]
+        },
         icon: '🐊',
         color: 'text-blue-400',
-        description: 'The world\'s largest tropical wetland, a spectacular wildlife sanctuary.'
+        description: 'The world\'s largest tropical wetland, a spectacular wildlife sanctuary.',
+        images: BIOME_IMAGES[BiomeId.Pantanal]
     },
     {
         id: BiomeId.Caatinga,
         name: 'Caatinga',
         unlockLevel: 4,
         mentor: {
-            name: 'Zé Pelintra',
+            name: 'Zumbi',
             characterId: CharacterId.ZePelintra,
-            description: 'The Wise Trickster of the Sertão',
+            description: 'character.zumbi.description',
+            imageUrl: CHARACTERS.find(c => c.id === CharacterId.ZePelintra)?.imageUrl,
         },
         mainMission: {
             id: 'caatinga-main',
@@ -208,10 +346,17 @@ export const BIOMES: Biome[] = [
         culturalMissions: [
             { id: 'ca-cult-1', title: 'Wisdom of the Sertão', description: 'Answer questions about life in the semi-arid.', type: 'cultural', xpReward: 50, interactionType: 'quiz' }
         ],
-        reward: NFTS['caatinga'],
+        reward: {
+            id: 'caatinga-nft',
+            biomeId: BiomeId.Caatinga,
+            name: 'Caatinga Amulet',
+            description: 'A sacred amulet representing the protection of the Caatinga',
+            imageUrl: NFT_IMAGES[BiomeId.Caatinga]
+        },
         icon: '🌵',
         color: 'text-orange-400',
-        description: 'A uniquely Brazilian semi-arid biome, full of resilient and adaptive life.'
+        description: 'A uniquely Brazilian semi-arid biome, full of resilient and adaptive life.',
+        images: BIOME_IMAGES[BiomeId.Caatinga]
     },
 ];
 

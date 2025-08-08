@@ -16,7 +16,7 @@ export const geminiService = {
         'Curupira': `Hello, guardian! I am Curupira. The Atlantic Forest needs our help. Many forget to take care of it, but together we can make a difference. Let's start by cleaning up the trash that doesn't belong here!`,
         'Maned Wolf': `Awooo! I am the Maned Wolf. Welcome to the Cerrado, a place of strength and rebirth. The seeds we plant today will be the great trees of tomorrow. Are you ready to cultivate the future?`,
         'Iara': `May the peace of the waters be with you. I am Iara. The Pantanal is a paradise, but it is fragile. I want you to show the beauty of this place to the world without anyone needing to disturb it. Let's create an unforgettable virtual journey.`,
-        'Zé Pelintra': `Greetings! Zé Pelintra in the house. In the Caatinga, we learn that every drop of water and every grain of food is sacred. Wisdom is knowing how to use what you have. I will teach you to thrive with little, with a lot of swagger!`,
+        'Zumbi': `Greetings! Zumbi in the house. In the Caatinga, we learn that every drop of water and every grain of food is sacred. Wisdom is knowing how to use what you have. I will teach you to thrive with little, with a lot of swagger!`,
     };
 
     return dialogues[mentorName] || `Hello! Welcome to ${biomeName}. Let's protect this place!`;

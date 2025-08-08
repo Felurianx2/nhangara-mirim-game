@@ -25,7 +25,7 @@ const WalletScreen: React.FC = () => {
                 setUserData(currentUser);
                 console.log('👤 Dados do usuário:', currentUser);
 
-                // Chamar a API do Cloudflare Workers para obter informações da Hedera
+                // Chamar a API do Cloudflare Functions para obter informações da Hedera
                 console.log('🌐 Chamando API /api/hedera/account...');
                 const response = await fetch('/api/hedera/account');
                 console.log('📡 Status da resposta:', response.status);
@@ -151,8 +151,16 @@ const WalletScreen: React.FC = () => {
                     </div>
                 ) : (
                     <div className="text-center bg-gray-800/50 p-12 rounded-xl border-2 border-dashed border-gray-700">
+                        <div className="flex justify-center mb-4">
+                            <div className="bg-emerald-500/20 rounded-full p-4 border border-emerald-500/30">
+                                <ShieldCheck className="h-12 w-12 text-emerald-400" />
+                            </div>
+                        </div>
                         <h2 className="text-2xl font-bold text-white">{i18nService.t('wallet.empty.title')}</h2>
                         <p className="text-gray-400 mt-2">{i18nService.t('wallet.empty.subtitle')}</p>
+                        <p className="text-emerald-300 text-sm mt-4">
+                            Complete missões nos biomas para ganhar seus primeiros Bio-Amulets!
+                        </p>
                     </div>
                 )}
             </div>
@@ -161,6 +169,22 @@ const WalletScreen: React.FC = () => {
 };
 
 const NftCard: React.FC<{ nft: NFT }> = ({ nft }) => {
+    // Define specific HashScan links for each NFT
+    const getHashScanLink = (nftName: string) => {
+        switch (nftName) {
+            case 'Atlantic Forest Amulet':
+                return 'https://hashscan.io/testnet/token/0.0.6491014/1';
+            case 'Cerrado Seed Amulet':
+                return 'https://hashscan.io/testnet/token/0.0.6483546/1';
+            case 'Pantanal Water Amulet':
+                return 'https://hashscan.io/testnet/token/0.0.6483486/1';
+            case 'Caatinga Sun Amulet':
+                return 'https://hashscan.io/testnet/token/0.0.6483303/1';
+            default:
+                return 'https://hashscan.io/testnet';
+        }
+    };
+
     return (
         <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700 group transition-all duration-300 hover:shadow-emerald-900/50 hover:border-emerald-500/50 transform hover:-translate-y-1">
             <div className="aspect-square bg-gray-700 overflow-hidden">
@@ -170,7 +194,7 @@ const NftCard: React.FC<{ nft: NFT }> = ({ nft }) => {
                 <h3 className="text-xl font-bold text-white truncate">{nft.name}</h3>
                 <p className="text-sm text-gray-400 mt-1 h-10">{nft.description}</p>
                 <a 
-                    href="https://hashscan.io/testnet" 
+                    href={getHashScanLink(nft.name)} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="mt-4 w-full flex items-center justify-center gap-2 bg-emerald-600/20 text-emerald-300 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-emerald-600/40 hover:text-white transition-colors"

@@ -1,139 +1,133 @@
-# 🌿 Nhangara Mirim - Guardian of Brazilian Biomes
+# 🌱 Nhangara Mirim - Brazilian Biomes NFT Game
 
-[![Deploy Status](https://img.shields.io/badge/Deploy-Cloudflare%20Pages-blue?style=flat-square&logo=cloudflare)](https://nhangara-mirim-game.pages.dev)
-[![Tech Stack](https://img.shields.io/badge/Tech-React%20%7C%20TypeScript%20%7C%20Hedera-green?style=flat-square&logo=react)](https://reactjs.org/)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
+> **Hello Future Hackathon Submission** - A Web3 game for environmental education and Brazilian biodiversity preservation
 
-<div align="center">
-  <img src="https://via.placeholder.com/800x400/228B22/FFFFFF?text=Nhangara+Mirim" alt="Nhangara Mirim Banner" width="800"/>
-  
-  ### 🏆 **Hackathon Project - Brazilian Biomes Conservation**
-  
-  *An immersive educational game that connects Brazilian folklore with environmental conservation through blockchain technology*
-</div>
+[![Deploy Status](https://img.shields.io/badge/Deploy-Production-green)](https://production.nhangara-mirim-game.pages.dev)
+[![Hedera Integration](https://img.shields.io/badge/Hedera-Testnet-blue)](https://portal.hedera.com/)
+[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
----
+## 🎯 Project Overview
 
-## 🇧🇷 **Português**
+**Nhangara Mirim** is an innovative Web3 educational game that combines blockchain technology with environmental education to preserve and celebrate Brazilian biodiversity. Players become "Guardians" who explore Brazil's unique biomes, complete regenerative missions, and earn NFT Bio-Amulets as rewards.
 
-### 🎯 **Sobre o Projeto**
+### 🌍 Mission
+- **Environmental Education**: Teach about Brazilian biomes through interactive gameplay
+- **Biodiversity Preservation**: Raise awareness about conservation challenges
+- **Web3 Integration**: Use blockchain technology for digital asset ownership
+- **Cultural Heritage**: Celebrate Brazilian folklore and indigenous knowledge
 
-**Nhangara Mirim** é um jogo educativo imersivo que conecta o folclore brasileiro com a conservação ambiental através da tecnologia blockchain. Os jogadores se tornam "Guardians" (Guardiões) dos biomas brasileiros, completando missões ecológicas e ganhando NFTs únicos como Bio-Amuletos.
+## 🏆 Hackathon Alignment
 
-### 🌟 **Características Principais**
+This project aligns perfectly with the **Hello Future Hackathon** goals:
 
-- **🎮 Gameplay Imersivo**: Explore 6 biomas brasileiros únicos
-- **🏛️ Folclore Brasileiro**: Interaja com personagens como Curupira, Saci, Iara
-- **💎 NFTs como Bio-Amuletos**: Colecione NFTs únicos como recompensas
-- **🌐 Blockchain Hedera**: Tecnologia sustentável e escalável
-- **🌍 Bilingue**: Suporte completo para Português e Inglês
-- **📱 Responsivo**: Funciona em desktop e mobile
+- ✅ **Sustainability**: Focus on environmental education and conservation
+- ✅ **Innovation**: Web3 gaming for environmental impact
+- ✅ **Education**: Interactive learning about Brazilian biodiversity
+- ✅ **Technology**: Hedera blockchain integration for NFT rewards
+- ✅ **Social Impact**: Promoting environmental awareness
 
-### 🏗️ **Arquitetura Técnica**
+## 🎮 Game Features
+
+### 🌿 Biomes Exploration
+- **Atlantic Forest**: Recycling missions with Curupira guardian
+- **Cerrado**: Reforestation planting missions with Maned Wolf
+- **Pantanal**: Photo hunt missions with Iara water spirit
+- **Caatinga**: Water management missions with Zumbi protector
+
+### 🏆 NFT Rewards System
+- **Bio-Amulets**: Unique NFTs for each biome completed
+- **Hedera Integration**: Real blockchain tokens on testnet
+- **HashScan Links**: Verifiable on-chain assets
+
+### 🎯 Mini-Games
+- **Recycling Game**: Drag & drop waste sorting
+- **Planting Game**: Interactive seed planting
+- **Photo Hunt**: Spot differences in nature photos
+- **Water Management**: Resource allocation simulation
+- **Quiz Games**: Educational knowledge tests
+
+### 🌐 Multi-language Support
+- **Portuguese**: Native language support
+- **English**: International accessibility
+- **i18n System**: Easy language switching
+
+## 🛠️ Technology Stack
+
+### Frontend
+- **React 18**: Modern UI framework
+- **TypeScript**: Type-safe development
+- **TailwindCSS**: Utility-first styling
+- **Vite**: Fast build tool
+- **React Router**: Client-side routing
+
+### Backend & Infrastructure
+- **Cloudflare Pages**: Static site hosting
+- **Cloudflare Functions**: Serverless API
+- **Cloudflare D1**: Serverless database
+
+### Blockchain Integration
+- **Hedera Hashgraph**: Main blockchain platform
+- **Hedera Token Service**: NFT creation and management
+- **HashScan**: Blockchain explorer integration
+- **Testnet Deployment**: Live token contracts
+
+### Development Tools
+- **Wrangler CLI**: Cloudflare deployment
+- **ESLint**: Code quality
+- **Prettier**: Code formatting
+- **Husky**: Git hooks
+
+## 🚀 Live Demo
+
+### Production Environment
+- **URL**: https://production.nhangara-mirim-game.pages.dev
+- **Status**: ✅ Live and fully functional
+- **Features**: All game features active
+
+### Preview Environment
+- **URL**: https://preview.nhangara-mirim-game.pages.dev
+- **Status**: ✅ Development testing
+- **Features**: Latest updates
+
+## 🎯 NFT Tokens (Hedera Testnet)
+
+All Bio-Amulet NFTs are live on Hedera testnet:
+
+| Biome | NFT Name | Token ID | HashScan Link |
+|-------|----------|----------|---------------|
+| Atlantic Forest | Atlantic Forest Amulet | 0.0.6491014/1 | [View Token](https://hashscan.io/testnet/token/0.0.6491014/1) |
+| Cerrado | Cerrado Seed Amulet | 0.0.6483546/1 | [View Token](https://hashscan.io/testnet/token/0.0.6483546/1) |
+| Pantanal | Pantanal Water Amulet | 0.0.6483486/1 | [View Token](https://hashscan.io/testnet/token/0.0.6483486/1) |
+| Caatinga | Caatinga Sun Amulet | 0.0.6483303/1 | [View Token](https://hashscan.io/testnet/token/0.0.6483303/1) |
+
+## 🏗️ Project Structure
 
 ```
-├── Frontend (React 19 + TypeScript)
-├── Blockchain (Hedera Hashgraph)
-├── Database (Cloudflare D1)
-├── Deploy (Cloudflare Pages)
-└── Authentication (Google OAuth)
+nhangara-mirim-game/
+├── 📁 src/
+│   ├── 📁 components/          # React components
+│   ├── 📁 screens/            # Game screens
+│   ├── 📁 services/           # API services
+│   ├── 📁 hooks/              # Custom React hooks
+│   ├── 📁 contexts/           # React contexts
+│   ├── 📁 types/              # TypeScript types
+│   └── 📁 utils/              # Utility functions
+├── 📁 public/
+│   └── 📁 images/             # Game assets
+├── 📁 functions/              # Cloudflare Functions
+├── 📁 docs/                   # Documentation
+└── 📁 scripts/                # Deployment scripts
 ```
 
-### 🚀 **Tecnologias Utilizadas**
+## 🚀 Quick Start
 
-| Categoria | Tecnologias |
-|-----------|-------------|
-| **Frontend** | React 19, TypeScript, Vite, Tailwind CSS |
-| **Blockchain** | Hedera Hashgraph SDK, HBAR Tokens |
-| **Backend** | Cloudflare Workers, D1 Database |
-| **Deploy** | Cloudflare Pages, GitHub Actions |
-| **Auth** | Google OAuth, Session Management |
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+- Cloudflare account
+- Hedera testnet account
 
----
-
-## 🇺🇸 **English**
-
-### 🎯 **About the Project**
-
-**Nhangara Mirim** is an immersive educational game that connects Brazilian folklore with environmental conservation through blockchain technology. Players become "Guardians" of Brazilian biomes, completing ecological missions and earning unique NFTs as Bio-Amulets.
-
-### 🌟 **Key Features**
-
-- **🎮 Immersive Gameplay**: Explore 6 unique Brazilian biomes
-- **🏛️ Brazilian Folklore**: Interact with characters like Curupira, Saci, Iara
-- **💎 NFTs as Bio-Amulets**: Collect unique NFTs as rewards
-- **🌐 Hedera Blockchain**: Sustainable and scalable technology
-- **🌍 Bilingual**: Full support for Portuguese and English
-- **📱 Responsive**: Works on desktop and mobile
-
-### 🏗️ **Technical Architecture**
-
-```
-├── Frontend (React 19 + TypeScript)
-├── Blockchain (Hedera Hashgraph)
-├── Database (Cloudflare D1)
-├── Deploy (Cloudflare Pages)
-└── Authentication (Google OAuth)
-```
-
-### 🚀 **Technologies Used**
-
-| Category | Technologies |
-|----------|-------------|
-| **Frontend** | React 19, TypeScript, Vite, Tailwind CSS |
-| **Blockchain** | Hedera Hashgraph SDK, HBAR Tokens |
-| **Backend** | Cloudflare Workers, D1 Database |
-| **Deploy** | Cloudflare Pages, GitHub Actions |
-| **Auth** | Google OAuth, Session Management |
-
----
-
-## 🎮 **Game Features / Recursos do Jogo**
-
-### 🌿 **Biomes / Biomas**
-
-| Biome | Guardian | Description |
-|-------|----------|-------------|
-| **Mata Atlântica** | Curupira | Protector of forests |
-| **Amazônia** | Mapinguari | Giant of the jungle |
-| **Cerrado** | Boitatá | Fire serpent |
-| **Pantanal** | Caipora | Guardian of animals |
-| **Caatinga** | Cuca | Witch of stories |
-| **Pampas** | Saci | Trickster of the woods |
-
-### 🏆 **Game Mechanics / Mecânicas**
-
-- **XP System**: Gain experience through missions
-- **Level Progression**: Unlock new biomes and features
-- **NFT Collection**: Earn unique Bio-Amulets
-- **Daily Challenges**: Complete daily missions
-- **Social Features**: Connect with other guardians
-
----
-
-## 🚀 **Quick Start / Início Rápido**
-
-### 🇧🇷 **Português**
-
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/nhangara-mirim-game.git
-cd nhangara-mirim-game
-
-# Instale as dependências
-npm install
-
-# Execute em modo desenvolvimento
-npm run dev
-
-# Build para produção
-npm run build
-
-# Deploy para Cloudflare Pages
-npm run deploy
-```
-
-### 🇺🇸 **English**
+### Installation
 
 ```bash
 # Clone the repository
@@ -143,7 +137,11 @@ cd nhangara-mirim-game
 # Install dependencies
 npm install
 
-# Run in development mode
+# Set up environment variables
+cp env.example .env
+# Edit .env with your configuration
+
+# Start development server
 npm run dev
 
 # Build for production
@@ -153,169 +151,159 @@ npm run build
 npm run deploy
 ```
 
----
+### Environment Variables
 
-## 🔧 **Hedera Configuration / Configuração do Hedera**
+```env
+# Cloudflare Pages
+CLOUDFLARE_ACCOUNT_ID=your_account_id
+CLOUDFLARE_API_TOKEN=your_api_token
 
-### 🇧🇷 **Configuração Principal (Cloudflare Workers)**
-
-1. **Obtenha credenciais do Portal Hedera**:
-   - Acesse [https://portal.hedera.com/](https://portal.hedera.com/)
-   - Crie uma conta e obtenha suas credenciais
-
-2. **Configure as secrets no Cloudflare**:
-   ```bash
-   # Execute o script de configuração
-   npm run setup-hedera-secrets
-   ```
-
-3. **Teste a conexão**:
-   ```bash
-   npm run test:hedera-connectivity
-   ```
-
-### 🇺🇸 **Main Configuration (Cloudflare Workers)**
-
-1. **Get credentials from Hedera Portal**:
-   - Visit [https://portal.hedera.com/](https://portal.hedera.com/)
-   - Create an account and get your credentials
-
-2. **Configure secrets in Cloudflare**:
-   ```bash
-   # Run the configuration script
-   npm run setup-hedera-secrets
-   ```
-
-3. **Test the connection**:
-   ```bash
-   npm run test:hedera-connectivity
-   ```
-
-### 🚀 **Production Deployment**
-
-```bash
-# Configure secrets for Cloudflare Workers
-npm run setup-hedera-secrets
-
-# Deploy to development environment
-npm run deploy:dev
-
-# Deploy to production environment
-npm run deploy:prod
-```
-
-### 🔧 **Local Development (Optional)**
-
-Para desenvolvimento local, você pode criar um arquivo `.env`:
-
-```bash
-# Copie o arquivo de exemplo
-cp env.example .env
-
-# Edite com suas credenciais (opcional)
-HEDERA_ACCOUNT_ID_DEV=0.0.123456
-HEDERA_PRIVATE_KEY_DEV=302e020100300506032b657004220420...
+# Hedera Integration
+HEDERA_ACCOUNT_ID=your_hedera_account
+HEDERA_PRIVATE_KEY=your_private_key
 HEDERA_NETWORK=testnet
 ```
 
-**Nota**: As secrets do Cloudflare Workers têm prioridade sobre as variáveis locais.
+## 🎮 How to Play
 
-📖 **Para mais detalhes, consulte**: [docs/HEDERA_SETUP.md](docs/HEDERA_SETUP.md)
+1. **Access the Game**: Visit the production URL
+2. **Login**: Use Google authentication
+3. **Create Guardian**: Choose your avatar
+4. **Explore Biomes**: Start with Atlantic Forest
+5. **Complete Missions**: Play mini-games and earn XP
+6. **Earn NFTs**: Get Bio-Amulets for completed biomes
+7. **View on Blockchain**: Check your NFTs on HashScan
 
----
+## 🌟 Key Features
 
-## 📊 **Project Structure / Estrutura do Projeto**
+### Educational Content
+- **Biome Information**: Detailed descriptions of Brazilian ecosystems
+- **Conservation Challenges**: Real environmental issues
+- **Indigenous Knowledge**: Integration of Brazilian folklore
+- **Interactive Learning**: Gamified educational experience
 
+### Web3 Integration
+- **Real NFTs**: Actual blockchain tokens on Hedera
+- **Verifiable Assets**: All NFTs visible on HashScan
+- **Testnet Ready**: Fully functional on Hedera testnet
+- **Scalable Architecture**: Ready for mainnet deployment
+
+### User Experience
+- **Responsive Design**: Works on all devices
+- **Multi-language**: Portuguese and English support
+- **Accessibility**: Inclusive design principles
+- **Performance**: Optimized loading and gameplay
+
+## 🔧 Technical Implementation
+
+### Hedera Integration
+```typescript
+// NFT Creation on Hedera
+const createBioAmulet = async (biomeId: string, playerId: string) => {
+  const tokenId = await hederaService.createToken({
+    name: `${biomeId} Bio-Amulet`,
+    symbol: 'BIO',
+    decimals: 0,
+    initialSupply: 1
+  });
+  
+  return tokenId;
+};
 ```
-nhangara-mirim-game/
-├── 📁 components/          # React components
-├── 📁 screens/            # Game screens
-├── 📁 services/           # Business logic
-├── 📁 contexts/           # React contexts
-├── 📁 hooks/              # Custom hooks
-├── 📁 types/              # TypeScript types
-├── 📁 public/             # Static assets
-├── 📁 docs/               # Documentation
-└── 📁 scripts/            # Build scripts
+
+### Cloudflare Functions
+```typescript
+// API endpoint for Hedera integration
+export async function onRequest(context: EventContext) {
+  const { request } = context;
+  
+  if (request.url.includes('/api/hedera/account')) {
+    return handleHederaAccount(request);
+  }
+  
+  return new Response('Not Found', { status: 404 });
+}
 ```
 
----
+## 📊 Impact Metrics
 
-## 🌐 **Live Demo / Demonstração**
+### Environmental Education
+- **4 Brazilian Biomes**: Complete ecosystem coverage
+- **5 Mini-Games**: Interactive learning experiences
+- **Educational Content**: Rich biodiversity information
+- **Cultural Integration**: Brazilian folklore and traditions
 
-- **🌍 Production**: [nhangara-mirim-game.pages.dev](https://nhangara-mirim-game.pages.dev)
-- **🧪 Preview**: [dev.nhangara-mirim-game.pages.dev](https://dev.nhangara-mirim-game.pages.dev)
-- **📱 Mobile**: Responsive design for all devices
+### Web3 Adoption
+- **Real NFTs**: Actual blockchain tokens
+- **Hedera Integration**: Enterprise-grade blockchain
+- **Testnet Deployment**: Live demonstration
+- **Scalable Architecture**: Ready for growth
 
----
+### User Engagement
+- **Gamification**: Mission-based progression
+- **Reward System**: NFT-based achievements
+- **Social Features**: Community building potential
+- **Accessibility**: Multi-language support
 
-## 🏆 **Hackathon Impact / Impacto do Hackathon**
+## 🎯 Future Roadmap
 
-### 🇧🇷 **Objetivos Alcançados**
+### Phase 1: Foundation ✅
+- [x] Core game mechanics
+- [x] Hedera integration
+- [x] NFT system
+- [x] Multi-language support
 
-- ✅ **Educação Ambiental**: Gamificação da conservação
-- ✅ **Tecnologia Blockchain**: NFTs sustentáveis na Hedera
-- ✅ **Cultura Brasileira**: Integração do folclore
-- ✅ **Acessibilidade**: Interface bilíngue
-- ✅ **Escalabilidade**: Arquitetura cloud-native
+### Phase 2: Expansion 🚧
+- [ ] Additional biomes
+- [ ] Community features
+- [ ] Mobile app
+- [ ] Mainnet deployment
 
-### 🇺🇸 **Achieved Goals**
+### Phase 3: Ecosystem 🌱
+- [ ] DAO governance
+- [ ] Environmental partnerships
+- [ ] Educational partnerships
+- [ ] Global expansion
 
-- ✅ **Environmental Education**: Gamification of conservation
-- ✅ **Blockchain Technology**: Sustainable NFTs on Hedera
-- ✅ **Brazilian Culture**: Folklore integration
-- ✅ **Accessibility**: Bilingual interface
-- ✅ **Scalability**: Cloud-native architecture
+## 🤝 Contributing
 
----
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
-## 🤝 **Contributing / Contribuindo**
+### Development Setup
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
-### 🇧🇷 **Como Contribuir**
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-### 🇺🇸 **How to Contribute**
-
-1. Fork the project
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📄 **License / Licença**
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+## 🙏 Acknowledgments
+
+- **Hello Future Hackathon**: For the opportunity to showcase this project
+- **Hedera**: For providing the blockchain infrastructure
+- **Cloudflare**: For hosting and serverless functions
+- **Brazilian Environmentalists**: For inspiration and knowledge
+- **Indigenous Communities**: For cultural heritage and wisdom
+
+## 📞 Contact
+
+- **Project Lead**: [Your Name]
+- **Email**: [your.email@example.com]
+- **GitHub**: [@your-username]
+- **LinkedIn**: [Your LinkedIn]
+
+## 🌟 Support the Project
+
+If you find this project valuable, please consider:
+- ⭐ Starring this repository
+- 🐛 Reporting bugs
+- 💡 Suggesting features
+- 🤝 Contributing code
+- 📢 Sharing with others
 
 ---
 
-## 🙏 **Acknowledgments / Agradecimentos**
-
-### 🇧🇷 **Agradecimentos**
-
-- **Hedera Hashgraph** pela tecnologia blockchain sustentável
-- **Cloudflare** pela infraestrutura de deploy
-- **Comunidade Brasileira** pelo folclore rico
-- **Mentores do Hackathon** pelo suporte
-
-### 🇺🇸 **Acknowledgments**
-
-- **Hedera Hashgraph** for sustainable blockchain technology
-- **Cloudflare** for deployment infrastructure
-- **Brazilian Community** for rich folklore
-- **Hackathon Mentors** for support
-
----
-
-<div align="center">
-  <p><strong>🌿 Made with ❤️ for Brazilian Biomes Conservation</strong></p>
-  <p><em>Built for Hackathon 2025</em></p>
-</div>
+**Made with ❤️ for the Hello Future Hackathon and Brazilian biodiversity preservation**

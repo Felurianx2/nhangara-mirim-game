@@ -42,7 +42,7 @@ const DailyCheckinModal: React.FC = () => {
                 <h2 className="text-3xl font-bold text-white mb-4">Reward Collected!</h2>
                 <p className="text-gray-300 text-lg">You've earned</p>
                 <div className="my-6 flex items-center justify-center gap-3 text-yellow-400">
-                    <img src="https://github.com/Felurianx2/nhangara-mirim-assets/blob/main/mini-games/planting/seed.png?raw=true" alt="Seed" className="w-16 h-16" />
+                    <img src="/images/mini-games/planting/seed-click.png" alt="Seed" className="w-16 h-16" />
                     <span className="text-5xl font-bold">{rewardAmount}</span>
                 </div>
                  <p className="text-gray-300 text-lg">seeds!</p>
@@ -53,7 +53,7 @@ const DailyCheckinModal: React.FC = () => {
                 <p className="text-gray-300 mb-6">Come back every day to earn seeds and help reforest Brazil!</p>
                 <div className="my-8 flex justify-center">
                     <div className="p-6 bg-gray-700 rounded-full animate-pulse">
-                        <img src="https://github.com/Felurianx2/nhangara-mirim-assets/blob/main/mini-games/planting/seed.png?raw=true" alt="Seed" className="w-16 h-16" />
+                        <img src="/images/mini-games/planting/seed.png" alt="Seed" className="w-16 h-16" />
                     </div>
                 </div>
                 <button 

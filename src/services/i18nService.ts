@@ -101,9 +101,33 @@ class I18nService {
         'pt-BR': 'Entrar com Google',
         'en-US': 'Login with Google'
       },
+      'login.description': {
+        'pt-BR': 'Faça login com sua conta Google para começar sua jornada',
+        'en-US': 'Sign in with your Google account to start your journey'
+      },
       'login.google.description': {
         'pt-BR': 'Faça login com sua conta Google para começar sua jornada',
         'en-US': 'Sign in with your Google account to start your journey'
+      },
+      'login.choose.account': {
+        'pt-BR': 'Escolher conta',
+        'en-US': 'Choose account'
+      },
+      'login.select.account': {
+        'pt-BR': 'Selecione uma conta para continuar',
+        'en-US': 'Select an account to continue'
+      },
+      'login.signin.google': {
+        'pt-BR': 'Entrar com Google',
+        'en-US': 'Sign in with Google'
+      },
+      'login.signing.in': {
+        'pt-BR': 'Entrando...',
+        'en-US': 'Signing in...'
+      },
+      'login.folklore.description': {
+        'pt-BR': '🌿 Personagens do folclore brasileiro - Guardiões dos biomas',
+        'en-US': '🌿 Brazilian folklore characters - Guardians of the biomes'
       },
       'login.email': {
         'pt-BR': 'Entrar com Email',
@@ -220,6 +244,42 @@ class I18nService {
       'welcome.features.collect': {
         'pt-BR': '🏆 Colecione Bio-Amuletos únicos',
         'en-US': '🏆 Collect unique Bio-Amulets'
+      },
+      'welcome.enter.adventures': {
+        'pt-BR': 'Entrar no mundo de aventuras',
+        'en-US': 'Enter the world of adventures'
+      },
+
+      // Onboarding
+      'onboarding.title': {
+        'pt-BR': 'Crie Seu Guardião',
+        'en-US': 'Create Your Guardian'
+      },
+      'onboarding.subtitle': {
+        'pt-BR': 'Escolha um avatar para representar você nesta jornada.',
+        'en-US': 'Choose an avatar to represent you on this journey.'
+      },
+      'onboarding.description': {
+        'pt-BR': 'Seu avatar será sua identidade visual no mundo de Nhangara Mirim. Escolha com sabedoria!',
+        'en-US': 'Your avatar will be your visual identity in the world of Nhangara Mirim. Choose wisely!'
+      },
+      'onboarding.confirm.button': {
+        'pt-BR': 'Confirmar e Iniciar Jornada',
+        'en-US': 'Confirm and Start Journey'
+      },
+      'onboarding.select.avatar': {
+        'pt-BR': 'Selecione um Avatar',
+        'en-US': 'Select an Avatar'
+      },
+
+      // Character Names
+      'character.zumbi': {
+        'pt-BR': 'Zumbi',
+        'en-US': 'Zumbi'
+      },
+      'character.zumbi.description': {
+        'pt-BR': 'O sábio Zumbi, protetor do sertão',
+        'en-US': 'The wise Zumbi, protector of the sertão'
       },
 
       // Navigation

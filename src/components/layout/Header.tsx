@@ -37,7 +37,7 @@ const Header: React.FC = () => {
           </div>
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2 text-sm bg-gray-700 px-3 py-1.5 rounded-full">
-               <img src="https://github.com/Felurianx2/nhangara-mirim-assets/blob/main/mini-games/planting/seed.png?raw=true" alt="Seed" className="w-5 h-5" />
+               <img src="/images/mini-games/planting/seed-click.png" alt="Seed" className="w-5 h-5" />
                <span className="font-semibold text-white">{playerState.seeds} Seeds</span>
             </div>
             <div className="flex items-center gap-2">

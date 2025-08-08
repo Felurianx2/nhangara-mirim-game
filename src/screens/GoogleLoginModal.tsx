@@ -19,56 +19,56 @@ const GoogleLoginModal: React.FC<GoogleLoginModalProps> = ({ isOpen, onClose, on
             id: 'curupira',
             email: 'curupira@mataatlantica.com',
             name: 'Curupira',
-            picture: 'https://via.placeholder.com/40/8B4513/FFFFFF?text=C',
+            picture: '/images/mentors/curupira.png',
             description: 'Protetor das florestas'
         },
         {
             id: 'saci',
             email: 'saci@sertao.com',
             name: 'Saci-Pererê',
-            picture: 'https://via.placeholder.com/40/000000/FFFFFF?text=S',
+            picture: '/images/bioamulets/amulet-caatinga.png',
             description: 'Travesso das matas'
         },
         {
             id: 'iara',
             email: 'iara@amazonas.com',
             name: 'Iara',
-            picture: 'https://via.placeholder.com/40/0066CC/FFFFFF?text=I',
+            picture: '/images/mentors/iara.png',
             description: 'Sereia dos rios'
         },
         {
             id: 'boitata',
             email: 'boitata@cerrado.com',
             name: 'Boitatá',
-            picture: 'https://via.placeholder.com/40/FF6600/FFFFFF?text=B',
+            picture: '/images/bioamulets/amulet-cerrado.png',
             description: 'Serpente de fogo'
         },
         {
             id: 'caipora',
             email: 'caipora@pantanal.com',
             name: 'Caipora',
-            picture: 'https://via.placeholder.com/40/228B22/FFFFFF?text=C',
+            picture: '/images/bioamulets/amulet-pantanal.png',
             description: 'Guardião dos animais'
         },
         {
             id: 'boto',
             email: 'boto@amazonas.com',
             name: 'Boto Cor-de-Rosa',
-            picture: 'https://via.placeholder.com/40/FF69B4/FFFFFF?text=B',
+            picture: '/images/bioamulets/amulet-mata.png',
             description: 'Encantador dos rios'
         },
         {
             id: 'mapinguari',
             email: 'mapinguari@amazonia.com',
             name: 'Mapinguari',
-            picture: 'https://via.placeholder.com/40/654321/FFFFFF?text=M',
+            picture: '/images/bioamulets/bioamulet.png',
             description: 'Gigante da selva'
         },
         {
             id: 'cuca',
             email: 'cuca@caatinga.com',
             name: 'Cuca',
-            picture: 'https://via.placeholder.com/40/8B0000/FFFFFF?text=C',
+            picture: '/images/mentors/Zumbi.png',
             description: 'Bruxa das histórias'
         }
     ];
@@ -121,8 +121,8 @@ const GoogleLoginModal: React.FC<GoogleLoginModalProps> = ({ isOpen, onClose, on
                             </svg>
                         </div>
                         <div>
-                            <h2 className="text-xl font-semibold text-gray-900">Escolher conta</h2>
-                            <p className="text-sm text-gray-500">Selecione uma conta para continuar</p>
+                            <h2 className="text-xl font-semibold text-gray-900">{i18nService.t('login.choose.account')}</h2>
+                            <p className="text-sm text-gray-500">{i18nService.t('login.select.account')}</p>
                         </div>
                     </div>
                     <button
@@ -149,7 +149,10 @@ const GoogleLoginModal: React.FC<GoogleLoginModalProps> = ({ isOpen, onClose, on
                                 <img
                                     src={account.picture}
                                     alt={account.name}
-                                    className="w-10 h-10 rounded-full"
+                                    className="w-12 h-12 rounded-full object-contain bg-gray-100"
+                                    onError={(e) => {
+                                        e.currentTarget.src = `https://via.placeholder.com/40/8B4513/FFFFFF?text=${account.name.charAt(0)}`;
+                                    }}
                                 />
                                 <div className="flex-1 text-left">
                                     <div className="font-medium text-gray-900">{account.name}</div>
@@ -182,15 +185,15 @@ const GoogleLoginModal: React.FC<GoogleLoginModalProps> = ({ isOpen, onClose, on
                         {isLoading ? (
                             <div className="flex items-center justify-center gap-2">
                                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-                                Entrando...
+                                {i18nService.t('login.signing.in')}
                             </div>
                         ) : (
-                            'Entrar com Google'
+                            i18nService.t('login.signin.google')
                         )}
                     </button>
                     
                     <p className="text-xs text-gray-500 mt-3 text-center">
-                        🌿 Personagens do folclore brasileiro - Guardiões dos biomas
+                        {i18nService.t('login.folklore.description')}
                     </p>
                 </div>
             </div>

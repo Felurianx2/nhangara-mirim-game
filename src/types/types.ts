@@ -17,6 +17,14 @@ export interface Mission {
   interactionType: MissionInteraction;
 }
 
+export interface BiomeImages {
+  hero: string;
+  map: string;
+  detail: string;
+  flora: string;
+  fauna: string;
+}
+
 export interface Biome {
   id: BiomeId;
   name: string;
@@ -28,12 +36,14 @@ export interface Biome {
   icon: string;
   color: string;
   description: string;
+  images: BiomeImages;
 }
 
 export interface Mentor {
   name: string;
   characterId: CharacterId;
   description: string;
+  imageUrl?: string;
 }
 
 export interface NFT {
@@ -72,6 +82,8 @@ export interface Character {
     id: CharacterId;
     name: string;
     imageUrl: string;
+    description?: string;
+    personality?: string;
 }
 
 export interface QuizQuestion {

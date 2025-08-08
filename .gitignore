@@ -95,3 +95,9 @@ temp/
 !wrangler.toml
 !DEPLOY_CLOUDFLARE.md
 !deploy.ps1
+
+# Assets repository (external)
+/nhangara-mirim-assets/
+
+# Cloudflare
+.wrangler/

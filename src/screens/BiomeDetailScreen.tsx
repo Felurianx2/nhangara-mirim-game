@@ -48,20 +48,33 @@ const BiomeDetailScreen: React.FC = () => {
     const isMainMissionCompleted = playerState.completedMissionIds.includes(biome.mainMission.id);
 
     return (
-        <div className="animate-fadeIn">
-            <Link to="/biomes" className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 mb-6 transition-colors">
-                <ChevronLeft size={20} />
-                <span>Back to map</span>
-            </Link>
+        <div className="min-h-screen relative animate-fadeIn">
+            {/* Background da Mata Atlântica */}
+            <div 
+                className="fixed inset-0 opacity-15 bg-cover bg-center"
+                style={{
+                    backgroundImage: `url('/images/biomas/mata-atlantica/mata-map.png')`,
+                    zIndex: -1
+                }}
+            />
+            
+            {/* Overlay para melhorar legibilidade */}
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-800/60 to-gray-900/80" style={{ zIndex: -1 }} />
+            
+            <div className="relative z-10">
+                <Link to="/biomes" className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 mb-6 transition-colors">
+                    <ChevronLeft size={20} />
+                    <span>Back to map</span>
+                </Link>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Mentor Column */}
                 <div className="md:col-span-1 bg-gray-800/50 rounded-xl p-6 flex flex-col items-center text-center border-2 border-gray-700">
                     {mentorCharacter && (
                         <img 
                             src={mentorCharacter.imageUrl} 
                             alt={mentorCharacter.name} 
-                            className="w-48 h-48 object-contain mb-4 transition-transform duration-500 hover:scale-110"
+                            className="w-48 h-48 object-contain mb-4 transition-transform duration-500 hover:scale-110 bg-gray-700/50 rounded-full p-4"
                         />
                     )}
                     <h2 className="text-3xl font-bold text-white">{biome.mentor.name}</h2>
@@ -86,6 +99,7 @@ const BiomeDetailScreen: React.FC = () => {
                         ))}
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     );
