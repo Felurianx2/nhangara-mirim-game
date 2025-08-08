@@ -359,10 +359,10 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 ## 📞 **Contact / Contato**
 
-- **Project Lead / Líder do Projeto**: [Your Name / Seu Nome]
-- **Email**: [your.email@example.com]
-- **GitHub**: [@your-username]
-- **LinkedIn**: [Your LinkedIn / Seu LinkedIn]
+- **Project Lead / Líder do Projeto**: Isamar Suarez
+- **Email**: isasuarezx2@gmail.com
+- **GitHub**: Felurianx2
+- **LinkedIn**: https://www.linkedin.com/in/isamar-su%C3%A1rez-693a8b140/
 
 ## 🌟 **Support the Project / Apoie o Projeto**
 
