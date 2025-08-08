@@ -1,0 +1,149 @@
+# 🌱 Marketplace: Raízes do Brasil Economy
+
+## Overview
+The Marketplace will be composed of **two categories**:
+
+### **Category 1** — Primary NFTs  
+(Created through social projects)
+
+### **Category 2** — Secondary NFTs 
+(Created in-game)
+
+---
+
+## 🛒 Economic Model — Category 1: Primary NFTs
+
+### **Primary Sale**
+- **Artist:** 90%  
+- **Reseller:** —  
+- **Platform:** 8%  
+- **Burn:** 2%  
+- **Value measured in:** HBAR
+
+### **Resale**
+- **Artist:** 5%  
+- **Reseller:** 90%  
+- **Platform:** 3%  
+- **Burn:** 2%  
+- **Value measured in:** HBAR  
+- **Additional Rule:** The project will burn 0.1% in HBAR from the treasury based on the value paid for the NFT.
+
+---
+
+## 🛒 Economic Model — Category 2: Secondary NFTs  
+(*Bio-Totems / Pata-Amulets*)
+
+- **Sale / Purchase:** 90%  
+- **Platform:** 8%  
+- **Burn:** 2%  
+- **Value measured in:** HBAR  
+- **Additional Rule:** The project will burn 0.1% in HBAR from the treasury based on the value paid for the NFT.
+
+---
+
+## 🌳 Moeda da Mata (MM) — Value Measurement & Distribution
+
+### **Solo Journey: Dominating Biomes — Rewards**
+- Start with **100 MM**  
+- Complete a biome mini-game: **+20 MM** & **+20 XP**  
+- Bonus for completing a full biome: **+50 MM** & **+50 XP**  
+- Complete 3 daily missions in a biome: **+30 MM** & **+30 XP**  
+- Recharge a Bio-Amulet weekly: **+5 MM** & **+5 XP**  
+- Skin price: **10 MM**  
+- Accessory price: **5 MM**
+
+---
+
+### **Trails of Ancestral Wisdom — Rewards**
+- Complete each mission or mini-game from each culture: **+70 MM** & **+70 XP**  
+- Bonus for completing an entire culture: **+100 MM** & **+100 XP**
+
+---
+
+### **Multiplayer Journey: League of the Nhangaras — Rewards**
+- Rewards are divided equally between players  
+- Each guild: 3 players  
+- Complete a mini-game or mission in a biome or culture: **+60 MM** & **+60 XP** (split equally)  
+- Complete a biome or culture in a league: **+300 MM** & **+150 XP** (split equally)  
+- **Monthly guild ranking rewards:**  
+    - **1st place:** 450 MM & 300 XP (split equally)  
+    - **2nd place:** 180 MM & 180 XP (split equally)  
+    - **3rd place:** 270 MM & 120 XP (split equally)  
+
+---
+
+## 💡 Moeda da Mata (MM) Utility
+
+**MM** is the game’s secondary virtual currency, designed to encourage sustainable actions and promote a circular in-game economy.
+
+### **1. In-Game (Utility Token)**
+- **Customization & Progression:** Buy skins and accessories for avatars.  
+- **Powers & Advantages:** Recharge basic Bio-Amulet energy weekly (limited durability).
+
+### **2. Governance & Engagement — Game DAO**
+- **Voting in game decisions:** 1 MM = 1 vote in community polls (e.g., "Which biome should be expanded in the next update?").
+
+---
+
+## 🪙 NFT Minting Rules
+
+### **Basic Bio-Amulets**
+- **Type:** Unlimited minting  
+- **Rarity:** Common (unique to each player)  
+- **Example:** “Birthspring Bio-Amulet” (floating) — granted to all players who complete the associated mission.  
+- **Prerequisite:** Complete the associated mission (e.g., recycle 10 items in the Atlantic Forest biome).  
+- **Uniqueness:** Minted with unique metadata (date, player name) but same power level.
+
+---
+
+### **Special NFTs: Bio-Totems**
+- **Type:** Limited editions (numbered)  
+- **Rarity:** Uncommon, Rare, Epic, Legendary  
+- **Example:** “Jaguar Bio-Totem” — transforms player into a sacred animal.  
+- **Prerequisite:** Complete the Indigenous Peoples trail.  
+- **Selection:** Animal and rarity randomly assigned based on the culture.  
+- **Tradable:** Yes, in the game marketplace.  
+- **Supply:** 10,000 per culture.  
+- **Mint cost:** Free.  
+- **Value measured in:** HBAR.
+
+---
+
+### **Special NFTs: Pata-Amulets**
+- **Type:** Limited editions (numbered)  
+- **Rarity:** Uncommon, Rare, Epic, Legendary  
+- **Prerequisite:** Complete the Freedom Route (Quilombos).  
+- **Selection:** Power and rarity randomly assigned based on the culture.  
+- **Tradable:** Yes, in the game marketplace.  
+- **Supply:** 10,000 per culture.  
+- **Mint cost:** Free.  
+- **Value measured in:** HBAR.
+
+---
+
+## 🤝 Social Projects: Raízes Digitais Academy
+- 3% of project reserves + 80% of revenue from NFT Category 1 & 2 sales will fund the academy.  
+- These NFTs will have no rarity, only unique features (e.g., object shapes, painting variations).
+
+---
+
+## 📈 Experience Levels (XP)
+- Each level requires a defined XP amount.  
+- Each character/skin has 10 levels.  
+- **MM reward increases by 50 MM** at each level.  
+- **XP required increases by 100 XP** at each level.
+
+| Level | XP Required | MM Reward |
+|-------|-------------|-----------|
+| 1     | 0           | —         |
+| 2     | 200         | 50 MM     |
+| 3     | 300         | 100 MM    |
+| 4     | 400         | 150 MM    |
+| 5     | 500         | 200 MM    |
+| 6     | 600         | 250 MM    |
+| 7     | 700         | 300 MM    |
+| 8     | 800         | 350 MM    |
+| 9     | 900         | 400 MM    |
+| 10    | 1000        | 450 MM    |
+
+---
