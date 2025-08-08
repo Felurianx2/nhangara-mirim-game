@@ -58,7 +58,7 @@ Este projeto se alinha perfeitamente com os objetivos do **Hello Future Hackatho
 #### 📜 Economia do Jogo
 O Nhangara Mirim conta com um modelo econômico sustentável, integrando um marketplace de NFTs dividido em duas categorias e a moeda virtual Moeda da Mata (MM), usada para progressão, personalização e governança no jogo.
 
-➡️ [Ver documento completo da Economia do Jogo](docs/marketplace-economia.md)
+➡️ [Ver documento completo da Economia do Jogo](https://github.com/Felurianx2/nhangara-mirim-game/blob/master/Economy%20Model)
 
 ---
 
@@ -112,7 +112,7 @@ This project aligns perfectly with the **Hello Future Hackathon** goals:
 #### 📜 Game Economy
 Nhangara Mirim features a sustainable economic model, integrating an NFT marketplace divided into two categories and the in-game currency Moeda da Mata (MM), used for progression, customization, and game governance.
 
-➡️ [View full Game Economy document](docs/marketplace-economy.md)
+➡️ [View full Game Economy document](https://github.com/Felurianx2/nhangara-mirim-game/blob/master/Economy%20Model)
 
 ---
 
