@@ -285,9 +285,9 @@ Any technical considerations
 - **Community**: For general support
 
 ### Contact
-- **Project Lead**: [Your Name]
-- **Email**: [your.email@example.com]
-- **GitHub**: [@your-username]
+- **Project Lead**: Isamar Suarez
+- **Email**: isasuarezx2@gmail.com
+- **GitHub**: Felurianx2
 
 ## 🙏 Thank You
 
